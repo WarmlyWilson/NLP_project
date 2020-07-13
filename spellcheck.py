@@ -15,10 +15,11 @@ def main():
         for w in line.strip().split():
             if d.check(w) or not w.isalpha():
                 print(w, end=" ")
-            if len(d.suggest(w)[0])!=0:
-				print(d.suggest(w)[0], end=" ")
-			else:
-				print(w, end=" ")
+	    else:
+            	if len(d.suggest(w))!=0:
+			print(d.suggest(w)[0], end=" ")
+	    	else:
+			print(w, end=" ")
         print()
 
 
